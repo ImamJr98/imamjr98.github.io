@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Ariansyah</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            background-color: #333;
+            padding: 10px 0;
+        }
+        .navbar a {
+            color: white !important;
+        }
+        .navbar-brand img {
+            height: 35px;
+            width: 35px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        .social-icons a {
+            color: white;
+            font-size: 20px;
+            margin-left: 10px;
+            transition: color 0.3s ease;
+        }
+        .social-icons a:hover {
+            color: #007bff;
+        }
+        .portfolio-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+        .portfolio-item img:hover {
+            transform: scale(1.05);
+        }
+        .about-img {
+            border-radius: 50%;
+            width: 25%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+        /* Horizontal scroll for portfolio */
+        .portfolio-container {
+            display: flex;
+            overflow-x: auto;
+            gap: 15px;
+            padding-bottom: 20px;
+        }
+        .portfolio-item {
+            min-width: 300px;
+            flex: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="img/1.png" alt="Logo"> ARIANSYAH
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                </ul>
+                <div class="social-icons ms-3">
+                    <a href="https://www.facebook.com/ariansyah.dasilva" target="_blank"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.instagram.com/ariansyah00114?igsh=MTh2Ym45MWN6bHp5dA==" target="_blank"><i class="bi bi-instagram"></i></a>
+                    <a href="https://wa.me/6282153886869" target="_blank"><i class="bi bi-whatsapp"></i></a>
+                    <a href="mailto:suaidi642@gmail.com" target="_blank"><i class="bi bi-envelope-fill"></i></a>
+                    <a href="https://youtube.com/@kreatorsambas8873?si=GpJv-gxYEBDbf2tS" target="_blank"><i class="bi bi-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="text-center bg-dark text-white py-5" id="home">
+        <h1>Welcome to Ariansyah Photography</h1>
+        <p>Capturing moments that matter</p>
+    </header>
+
+    <!-- About Section -->
+    <section class="py-5" id="about">
+        <div class="container text-center">
+            <h2>Tentang Saya</h2>
+            <img src="img/about.jpg" alt="About Me" class="about-img mb-4">
+            <p>Hai! Nama saya <strong>Ariansyah</strong>, seorang fotografer profesional yang berdomisili di <strong>Dusun Sungai, Desa Sendoyan, Kecamatan Sejangkung, Kabupaten Sambas</strong>. Dengan pengalaman lebih dari dua tahun di dunia fotografi, saya berkomitmen untuk menangkap setiap momen berharga Anda dalam sebuah gambar yang penuh makna.</p>
+            <p>Saya menyediakan jasa fotografi untuk berbagai acara, seperti:</p>
+            <ul class="text-start mx-auto" style="max-width: 600px;">
+                <li><strong>Prewedding</strong> untuk mengabadikan perjalanan cinta Anda</li>
+                <li><strong>Akad nikah dan resepsi pernikahan</strong> sebagai momen yang tak terlupakan</li>
+                <li><strong>Ulang tahun</strong> untuk merayakan kebahagiaan bersama orang terdekat</li>
+                <li><strong>Foto wisuda</strong> untuk mengabadikan pencapaian akademik</li>
+                <li>Dan layanan <strong>foto bebas</strong> untuk kebutuhan pribadi atau profesional Anda</li>
+            </ul>
+            <p>Portofolio saya berisi hasil karya terbaik yang bisa Anda lihat di halaman ini. Saya percaya bahwa setiap foto memiliki cerita, dan saya ingin membantu Anda menceritakan kisah Anda melalui lensa kamera saya.</p>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="py-5 bg-light" id="portfolio">
+        <div class="container">
+            <h2 class="text-center mb-4">Portfolio</h2>
+            <div class="portfolio-container">
+                <!-- Portfolio Image 1 -->
+                <div class="portfolio-item">
+                    <img src="img/1a.jpg" alt="Photo 1a" data-bs-toggle="modal" data-bs-target="#photoModal" onclick="openModal('img/1a.jpg')">
+                    <p class="text-center">Photo 1</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="img/1b.jpg" alt="Photo 1b" data-bs-toggle="modal" data-bs-target="#photoModal" onclick="openModal('img/1b.jpg')">
+                    <p class="text-center">Photo 2</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="img/1c.jpg" alt="Photo 1c" data-bs-toggle="modal" data-bs-target="#photoModal" onclick="openModal('img/1c.jpg')">
+                    <p class="text-center">Photo 3</p>
+                </div>
+                <!-- Portfolio Image 2 -->
+                <div class="portfolio-item">
+                    <img src="img/2a.jpg" alt="Photo 2a" data-bs-toggle="modal" data-bs-target="#photoModal" onclick="openModal('img/2a.jpg')">
+                    <p class="text-center">Photo 4</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="img/2b.jpg" alt="Photo 2b" data-bs-toggle="modal" data-bs-target="#photoModal" onclick="openModal('img/2b.jpg')">
+                    <p class="text-center">Photo 5</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="img/2c.jpg" alt="Photo 2c" data-bs-toggle="modal" data-bs-target="#photoModal" onclick="openModal('img/2c.jpg')">
+                    <p class="text-center">Photo 6</p>
+                </div>
+                <!-- Portfolio Image 3 -->
+                <div class="portfolio-item">
+                    <img src="img/3a.jpg" alt="Photo 3a" data-bs-toggle="modal" data-bs-target="#photoModal" onclick="openModal('img/3a.jpg')">
+                    <p class="text-center">Photo 7</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="img/3b.jpg" alt="Photo 3b" data-bs-toggle="modal" data-bs-target="#photoModal" onclick="openModal('img/3b.jpg')">
+                    <p class="text-center">Photo 8</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="img/3c.jpg" alt="Photo 3c" data-bs-toggle="modal" data-bs-target="#photoModal" onclick="openModal('img/3c.jpg')">
+                    <p class="text-center">Photo 9</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="photoModal" tabindex="-1" aria-labelledby="photoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <img id="modalImage" src="" class="img-fluid" alt="Modal Image">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Ariansyah Photography. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+    <!-- Custom JS -->
+    <script>
+        function openModal(imageSrc) {
+            const modalImage = document.getElementById('modalImage');
+            modalImage.src = imageSrc;
+        }
+    </script>
+
+</body>
+</html>
